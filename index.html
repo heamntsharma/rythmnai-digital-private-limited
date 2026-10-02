@@ -3,189 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#03123F">
-<meta name="description" content="Follow Rythmn AI on LinkedIn, Instagram and Facebook. Software, AI and cloud engineering from Jaipur.">
-<title>Follow Rythmn AI | Software, AI &amp; Cloud Engineering</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<title>Follow Rythmn AI</title>
 <style>
-:root{--bg:#03123F;--bg2:#071a55;--card:#0c2266;--line:#243c8f;--ink:#f2f5ff;--mute:#a8b5e6;--blue:#4c7dff;--amber:#ffb547;--li:#0a66c2;--ig:#d62976;--fb:#1877f2;
---head:"Sora","Segoe UI",system-ui,sans-serif;--body:"Inter","Segoe UI",system-ui,sans-serif}
+:root{--bg:#f3f1fb;--ink:#1c1840;--mute:#5d5880;--card:#fff;--line:#d9d4f0;--accent:#5b3df5;--li:#0a66c2;--ig:#d62976;--fb:#1877f2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14112b;--ink:#f1eefc;--mute:#a9a3cc;--card:#201b42;--line:#383162;--accent:#9a85ff}}
+:root[data-theme="dark"]{--bg:#14112b;--ink:#f1eefc;--mute:#a9a3cc;--card:#201b42;--line:#383162;--accent:#9a85ff}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#10298a 0%,var(--bg) 60%);color:var(--ink);font-family:var(--body);line-height:1.55;min-height:100vh;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
-a{color:inherit}
-.layout{display:grid;grid-template-columns:240px minmax(0,520px) 240px;gap:28px;justify-content:center;max-width:1100px;margin:0 auto;padding:28px 16px}
-
-/* side message rails */
-.rail{position:sticky;top:20px;height:calc(100vh - 40px);overflow:hidden;border-radius:18px;
--webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
-.track{display:flex;flex-direction:column;gap:12px;animation:up var(--dur,40s) linear infinite}
-.rail.r .track{animation-name:down}
-.rail:hover .track,.rail:focus-within .track{animation-play-state:paused}
-@keyframes up{to{transform:translateY(-50%)}}
-@keyframes down{from{transform:translateY(-50%)}to{transform:translateY(0)}}
-.msg{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px;font-size:14px;color:var(--mute)}
-.msg b{display:block;color:var(--ink);font-family:var(--head);font-size:14px;margin-bottom:3px}
-.msg i{font-style:normal;display:inline-block;margin-bottom:6px;font-size:12px;color:var(--amber);font-weight:600}
-
-/* main */
-main{min-width:0}
-.eq{display:flex;align-items:flex-end;gap:4px;height:38px;margin-bottom:16px}
-.eq span{width:6px;border-radius:3px;background:linear-gradient(var(--amber),var(--blue));height:100%;transform-origin:bottom;animation:eq 1.1s ease-in-out infinite}
-.eq span:nth-child(2n){animation-delay:.15s}.eq span:nth-child(3n){animation-delay:.3s}.eq span:nth-child(4n){animation-delay:.45s}
-@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
-.co{margin:0 0 6px;color:var(--mute);font-size:14px}
-h1{font-family:var(--head);font-size:clamp(30px,5vw,42px);line-height:1.1;margin:0 0 12px;font-weight:800;letter-spacing:-.02em}
-.lede{color:var(--mute);margin:0 0 6px}
-.rot{font-family:var(--head);font-weight:700;color:var(--amber);min-height:1.6em;margin:0 0 22px}
-.rot::after{content:"";display:inline-block;width:2px;height:1em;background:var(--amber);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-
-.hello{background:var(--bg2);border:1px solid var(--line);border-radius:18px 18px 18px 4px;padding:14px 16px;margin-bottom:20px}
-.hello b{font-family:var(--head)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins","Segoe UI",system-ui,sans-serif;line-height:1.5;min-height:100vh;display:flex;justify-content:center;padding:28px 16px}
+main{width:100%;max-width:460px}
+.wave{display:flex;align-items:center;gap:3px;height:36px;margin-bottom:14px}
+.wave i{display:block;width:5px;border-radius:3px;background:var(--accent);animation:w 1.2s ease-in-out infinite}
+.wave i:nth-child(1){height:30%}.wave i:nth-child(2){height:70%;animation-delay:.1s}.wave i:nth-child(3){height:100%;animation-delay:.2s}.wave i:nth-child(4){height:55%;animation-delay:.3s}.wave i:nth-child(5){height:85%;animation-delay:.4s}.wave i:nth-child(6){height:40%;animation-delay:.5s}
+@keyframes w{50%{transform:scaleY(.4)}}
+@media (prefers-reduced-motion:reduce){.wave i{animation:none}}
+h1{font-size:30px;line-height:1.15;margin:0 0 8px;font-weight:700}
+.sub{color:var(--mute);margin:0 0 24px}
+.msg{background:var(--card);border:1px solid var(--line);border-radius:18px 18px 18px 4px;padding:14px 16px;margin-bottom:22px}
+.msg b{display:block;margin-bottom:2px}
 .links{display:grid;gap:12px}
-.btn{position:relative;display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;text-decoration:none;font-weight:600;overflow:hidden;transition:transform .15s,border-color .15s}
-.btn:hover{transform:translateY(-2px);border-color:var(--c)}
-.btn:focus-visible,.cta a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
-.dot{width:44px;height:44px;border-radius:50%;background:var(--c);display:grid;place-items:center;font-family:var(--head);font-weight:800;flex:none}
+a.btn{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none;font-weight:600}
+a.btn:hover{border-color:var(--c)}
+a.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.dot{width:42px;height:42px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
 .t small{display:block;color:var(--mute);font-weight:400}
-.go{margin-left:auto;background:var(--c);padding:8px 16px;border-radius:999px;font-size:14px}
-.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(0);animation:rp .6s ease-out;pointer-events:none}
-@keyframes rp{to{transform:scale(4);opacity:0}}
-.done .go::before{content:"Opened ✓ "}
-
-/* company ad */
-.ad{margin-top:26px;padding:22px;border-radius:20px;background:linear-gradient(145deg,#1a3bb8,#0b2a8a 60%,#071a55);border:1px solid var(--line)}
-.ad h2{font-family:var(--head);font-size:22px;line-height:1.2;margin:0 0 8px}
-.ad p{margin:0 0 16px;color:#d5ddff}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.stats div{background:rgba(255,255,255,.09);border-radius:12px;padding:10px;text-align:center;font-size:12px;color:var(--mute)}
-.stats b{display:block;font-family:var(--head);font-size:16px;color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;padding:0;list-style:none}
-.chips li{font-size:12.5px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.12)}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
-.cta a{flex:1 1 150px;text-align:center;padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid rgba(255,255,255,.4)}
-.cta a.p{background:var(--amber);color:#1b1200;border-color:var(--amber)}
-.foot{margin:20px 0 0;text-align:center;font-size:13px;color:var(--mute)}
-
-/* tablet/mobile: rails become horizontal tickers above and below */
-@media (max-width:980px){
-.layout{display:flex;flex-direction:column;gap:18px;padding:16px 14px}
-main{order:2}
-.rail.l{order:1}.rail.r{order:3}
-.rail{position:static;height:auto;border-radius:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.track{flex-direction:row;width:max-content;animation-name:left}
-.rail.r .track{animation-name:right}
-.msg{width:250px;flex:none}
-@keyframes left{to{transform:translateX(-50%)}}
-@keyframes right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-}
-@media (max-width:420px){.stats{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){
-.track,.eq span,.rot::after{animation:none}
-.rail{overflow:auto}
-.eq span{transform:scaleY(.7)}
-}
+.go{margin-left:auto;background:var(--c);color:#fff;padding:7px 14px;border-radius:999px;font-size:14px}
+.ad{margin-top:26px;padding:20px;border-radius:16px;background:var(--accent);color:#fff}
+.ad h2{margin:0 0 8px;font-size:21px;line-height:1.25}
+.ad p{margin:0 0 14px;opacity:.92}
+.ad ul{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:10px}
+.ad li{background:rgba(255,255,255,.14);border-radius:10px;padding:10px 12px;font-size:14px}
+.ad li b{display:block;font-size:15px}
+.ad .cta{margin:0;font-weight:600}
 </style>
 </head>
 <body>
-<div class="layout">
+<main>
+  <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <h1>Stay connected with Rythmn AI</h1>
+  <p class="sub">Follow us on every platform and be the first to see our updates.</p>
 
-  <aside class="rail l" aria-label="What we build" id="railL">
-    <div class="track">
-      <div class="msg"><i>AI</i><b>AI chatbots &amp; assistants</b>Support and sales copilots that answer from your own documents.</div>
-      <div class="msg"><i>AI</i><b>RAG systems</b>Grounded answers with citations you can trace to the source.</div>
-      <div class="msg"><i>AI</i><b>AI agents</b>Agents that call your APIs and hand off to a human when unsure.</div>
-      <div class="msg"><i>Build</i><b>Websites &amp; landing pages</b>Fast, SEO-ready sites with a CMS your team can run.</div>
-      <div class="msg"><i>Build</i><b>SaaS development</b>Multi-tenant platforms with auth, billing and admin tooling.</div>
-      <div class="msg"><i>Build</i><b>E-commerce &amp; mobile apps</b>Storefronts, payments and iOS/Android apps from one codebase.</div>
-    </div>
-  </aside>
+  <div class="msg"><b>A message from us</b>Your follow means a lot to us. Tap Like and Follow on all three platforms below, and tell your friends too. Thank you!</div>
 
-  <main id="main">
-    <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    <p class="co">Rythmn AI Digital Private Limited · Jaipur, India</p>
-    <h1>Building intelligent digital futures.</h1>
-    <p class="lede">Follow us for product launches, AI guides and engineering updates.</p>
-    <p class="rot" id="rot" aria-live="off"></p>
-
-    <div class="hello"><b>A message from us</b><br>Your follow means a lot. Tap Like or Follow on all three platforms below and stay in the loop. Thank you!</div>
-
-    <div class="links">
-      <a class="btn" style="--c:var(--li)" href="https://www.linkedin.com/company/rythmnai/" target="_blank" rel="noopener"><span class="dot">in</span><span class="t">LinkedIn<small>Follow our company page</small></span><span class="go">Follow</span></a>
-      <a class="btn" style="--c:var(--ig)" href="https://www.instagram.com/rythmnai/" target="_blank" rel="noopener"><span class="dot">ig</span><span class="t">Instagram<small>@rythmnai</small></span><span class="go">Follow</span></a>
-      <a class="btn" style="--c:var(--fb)" href="https://www.facebook.com/rythmnai" target="_blank" rel="noopener"><span class="dot">f</span><span class="t">Facebook<small>Like and follow our page</small></span><span class="go">Like</span></a>
-    </div>
-
-    <section class="ad" aria-label="About Rythmn AI">
-      <h2>Software. AI. Automation. One team.</h2>
-      <p>We design, build and run the websites, products, platforms and AI systems modern businesses depend on, from architecture to on-call.</p>
-      <div class="stats">
-        <div><b>14</b>service lines</div>
-        <div><b>AI-first</b>assistants, RAG, agents</div>
-        <div><b>AWS &amp; GCP</b>cloud and DevOps</div>
-      </div>
-      <ul class="chips">
-        <li>Websites</li><li>SaaS</li><li>E-commerce</li><li>Mobile apps</li><li>AI agents</li><li>Cloud &amp; Kubernetes</li><li>Automation</li>
-      </ul>
-      <div class="cta">
-        <a class="p" href="https://rythmnai.com/contact/" target="_blank" rel="noopener">Book a free call</a>
-        <a href="https://rythmnai.com/" target="_blank" rel="noopener">Visit rythmnai.com</a>
-        <a href="mailto:hello@rythmnai.com?subject=Project%20enquiry">hello@rythmnai.com</a>
-      </div>
-    </section>
-    <p class="foot">Build · Innovate · Grow</p>
-  </main>
-
-  <aside class="rail r" aria-label="Why Rythmn AI" id="railR">
-    <div class="track">
-      <div class="msg"><i>Follow</i><b>Don't miss a launch</b>Follow us on LinkedIn, Instagram and Facebook for every update.</div>
-      <div class="msg"><i>Product</i><b>Marketing OS</b>Every channel on one board. Early access is open.</div>
-      <div class="msg"><i>Process</i><b>Weekly demos</b>Working software on a live staging URL every Friday.</div>
-      <div class="msg"><i>Cloud</i><b>Shipped with CI &amp; monitoring</b>AWS and GCP, delivered with an SLA.</div>
-      <div class="msg"><i>Where</i><b>Jaipur, working worldwide</b>Available for new engagements, remote.</div>
-      <div class="msg"><i>Talk</i><b>30 minutes, no deck</b>Tell us what you are building and book a free call.</div>
-    </div>
-  </aside>
-
-</div>
-
-<script>
-(function(){
-  // 1. Seamless rails: clone the messages once, speed based on content size
-  ["railL","railR"].forEach(function(id){
-    var rail=document.getElementById(id), track=rail.querySelector(".track");
-    var items=Array.prototype.slice.call(track.children);
-    items.forEach(function(n){var c=n.cloneNode(true);c.setAttribute("aria-hidden","true");track.appendChild(c)});
-    rail.style.setProperty("--dur",(items.length*7)+"s");
-  });
-
-  // 2. Rotating headline words (typewriter)
-  var words=["Websites that convert.","SaaS products that scale.","AI agents that do real work.","Cloud that stays up."];
-  var el=document.getElementById("rot"), w=0, i=0, del=false;
-  var still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(still){el.textContent=words[0];}
-  else (function tick(){
-    var full=words[w];
-    el.textContent=full.slice(0,i);
-    if(!del&&i<full.length){i++;setTimeout(tick,55)}
-    else if(!del){del=true;setTimeout(tick,1400)}
-    else if(i>0){i--;setTimeout(tick,28)}
-    else{del=false;w=(w+1)%words.length;setTimeout(tick,250)}
-  })();
-
-  // 3. Button ripple + "opened" state
-  document.querySelectorAll(".btn").forEach(function(b){
-    b.addEventListener("click",function(e){
-      var r=b.getBoundingClientRect(),s=Math.max(r.width,r.height);
-      var d=document.createElement("span");d.className="ripple";
-      d.style.cssText="width:"+s+"px;height:"+s+"px;left:"+(e.clientX-r.left-s/2)+"px;top:"+(e.clientY-r.top-s/2)+"px";
-      b.appendChild(d);setTimeout(function(){d.remove()},600);
-      b.classList.add("done");
-    });
-  });
-})();
-</script>
+  <div class="links">
+    <a class="btn" style="--c:var(--li)" href="https://www.linkedin.com/company/rythmnai/" target="_blank" rel="noopener"><span class="dot">in</span><span class="t">LinkedIn<small>Follow our company page</small></span><span class="go">Follow</span></a>
+    <a class="btn" style="--c:var(--ig)" href="https://www.instagram.com/rythmnai/" target="_blank" rel="noopener"><span class="dot">ig</span><span class="t">Instagram<small>@rythmnai</small></span><span class="go">Follow</span></a>
+    <a class="btn" style="--c:var(--fb)" href="https://www.facebook.com/rythmnai" target="_blank" rel="noopener"><span class="dot">f</span><span class="t">Facebook<small>Like and follow our page</small></span><span class="go">Like</span></a>
+  </div>
+  <section class="ad" aria-label="About Rythmn AI">
+    <h2>Rythmn AI: smarter work with AI</h2>
+    <p>We build AI-powered solutions that help teams and businesses save time, make better decisions and grow faster.</p>
+    <ul>
+      <li><b>Practical AI</b>Tools designed around real business needs.</li>
+      <li><b>Faster results</b>Automate routine work and focus on what matters.</li>
+      <li><b>Made for you</b>Solutions that fit the way your team works.</li>
+    </ul>
+    <p class="cta">Follow us above to see our latest launches, updates and ideas.</p>
+  </section>
+</main>
 </body>
 </html>
