@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Follow Rythmn AI</title>
+<style>
+:root{--bg:#f3f1fb;--ink:#1c1840;--mute:#5d5880;--card:#fff;--line:#d9d4f0;--accent:#5b3df5;--li:#0a66c2;--ig:#d62976;--fb:#1877f2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14112b;--ink:#f1eefc;--mute:#a9a3cc;--card:#201b42;--line:#383162;--accent:#9a85ff}}
+:root[data-theme="dark"]{--bg:#14112b;--ink:#f1eefc;--mute:#a9a3cc;--card:#201b42;--line:#383162;--accent:#9a85ff}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins","Segoe UI",system-ui,sans-serif;line-height:1.5;min-height:100vh;display:flex;justify-content:center;padding:28px 16px}
+main{width:100%;max-width:460px}
+.wave{display:flex;align-items:center;gap:3px;height:36px;margin-bottom:14px}
+.wave i{display:block;width:5px;border-radius:3px;background:var(--accent);animation:w 1.2s ease-in-out infinite}
+.wave i:nth-child(1){height:30%}.wave i:nth-child(2){height:70%;animation-delay:.1s}.wave i:nth-child(3){height:100%;animation-delay:.2s}.wave i:nth-child(4){height:55%;animation-delay:.3s}.wave i:nth-child(5){height:85%;animation-delay:.4s}.wave i:nth-child(6){height:40%;animation-delay:.5s}
+@keyframes w{50%{transform:scaleY(.4)}}
+@media (prefers-reduced-motion:reduce){.wave i{animation:none}}
+h1{font-size:30px;line-height:1.15;margin:0 0 8px;font-weight:700}
+.sub{color:var(--mute);margin:0 0 24px}
+.msg{background:var(--card);border:1px solid var(--line);border-radius:18px 18px 18px 4px;padding:14px 16px;margin-bottom:22px}
+.msg b{display:block;margin-bottom:2px}
+.links{display:grid;gap:12px}
+a.btn{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none;font-weight:600}
+a.btn:hover{border-color:var(--c)}
+a.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.dot{width:42px;height:42px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.t small{display:block;color:var(--mute);font-weight:400}
+.go{margin-left:auto;background:var(--c);color:#fff;padding:7px 14px;border-radius:999px;font-size:14px}
+.share{margin-top:22px;display:flex;gap:10px}
+button{flex:1;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+button.p{background:var(--accent);border-color:var(--accent);color:#fff}
+#note{min-height:22px;margin-top:10px;color:var(--mute);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<main>
+  <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <h1>Stay connected with Rythmn AI</h1>
+  <p class="sub">Follow us on every platform and be the first to see our updates.</p>
+
+  <div class="msg"><b>A message from us</b>Your follow means a lot to us. Tap Like and Follow on all three platforms below, and tell your friends too. Thank you!</div>
+
+  <div class="links">
+    <a class="btn" style="--c:var(--li)" href="https://www.linkedin.com/company/rythmnai/" target="_blank" rel="noopener"><span class="dot">in</span><span class="t">LinkedIn<small>Follow our company page</small></span><span class="go">Follow</span></a>
+    <a class="btn" style="--c:var(--ig)" href="https://www.instagram.com/rythmnai/" target="_blank" rel="noopener"><span class="dot">ig</span><span class="t">Instagram<small>@rythmnai</small></span><span class="go">Follow</span></a>
+    <a class="btn" style="--c:var(--fb)" href="https://www.facebook.com/rythmnai" target="_blank" rel="noopener"><span class="dot">f</span><span class="t">Facebook<small>Like and follow our page</small></span><span class="go">Like</span></a>
+  </div>
+
+  <div class="share">
+    <button class="p" id="share">Share with friends</button>
+    <button id="wa">WhatsApp</button>
+  </div>
+  <div id="note" role="status"></div>
+</main>
+<script>
+var text="Follow Rythmn AI on LinkedIn, Instagram and Facebook.";
+var note=document.getElementById("note");
+document.getElementById("share").onclick=function(){
+  var url=location.href;
+  if(navigator.share){navigator.share({title:"Rythmn AI",text:text,url:url}).catch(function(){});return}
+  if(navigator.clipboard){navigator.clipboard.writeText(text+" "+url).then(function(){note.textContent="Link copied. Paste it anywhere to share."}).catch(function(){note.textContent="Could not copy. Please share the page link manually."})}
+};
+document.getElementById("wa").onclick=function(){
+  window.open("https://wa.me/?text="+encodeURIComponent(text+" "+location.href),"_blank","noopener");
+};
+</script>
+</body>
+</html>
